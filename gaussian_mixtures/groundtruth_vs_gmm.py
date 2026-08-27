@@ -42,8 +42,8 @@ plt.title('2D Gaussian Samples with 1 sigma Ellipse')
 plt.legend()
 plt.grid(True, alpha=0.3)
 plt.axis('equal')
-plt.show()
 plt.savefig('gmm_scatter_plot.png')
+plt.show()
 
 # MLE estimation
 N = gt_gaussian.shape[0]
@@ -102,7 +102,7 @@ plt.title(f'Original vs GMM ({M} samples)')
 plt.legend()
 plt.grid(True, alpha=0.3)
 plt.axis('equal')
-plt.show()
 plt.savefig('gmm_sample_overlay.png')
+plt.show()
 
 

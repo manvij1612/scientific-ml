@@ -83,8 +83,8 @@ plt.ylabel('Test MSE')
 plt.title('Test MSE vs lambda for different M values')
 plt.legend()
 plt.grid(True, alpha=0.3)
-plt.show()
 plt.savefig('test_mse_vs_lambda.png')
+plt.show()
 
 plt.figure(figsize=(10, 6))
 for M in Ms:
@@ -96,8 +96,8 @@ plt.xlabel('Regularization lamda (log scale)')
 plt.ylabel('Condition Number (log scale)')
 plt.title('Condition Number Before vs After Ridge Regularization')
 plt.legend(ncol=2, fontsize=8)
-plt.show()
 plt.savefig('condition_number_vs_lambda.png')
+plt.show()
 
 # Using sklearn Ridge for verification
 max_diffs = {}
@@ -179,5 +179,5 @@ plt.title("Comparison of Fits: Best, Poorly Conditioned, Over-Regularized")
 plt.legend()
 plt.grid(True, alpha=0.3)
 plt.tight_layout()
-plt.show()
 plt.savefig('final_reflections.png')
+plt.show()

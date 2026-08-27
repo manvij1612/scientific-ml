@@ -3,7 +3,6 @@ import matplotlib.pyplot as plt
 import torch
 from torch import nn
 from torch.utils.data import DataLoader, TensorDataset
-from torchvision import datasets, transforms
 
 def sho_analytic(t, A=1.0, k=1.0):
     """ Analytic solution for the 1D harmonic oscillator.
@@ -11,7 +10,7 @@ def sho_analytic(t, A=1.0, k=1.0):
     Initial conditions are
     q(0) = A
     p(0) = 0
-    
+
     Parameters are
     mass m = 1
     spring constant k > 0
@@ -23,12 +22,12 @@ def sho_analytic(t, A=1.0, k=1.0):
     return q, p
 
 def sho_rhs(q, p, k=1.0):
-    """Right-hand side of the 
-    
+    """Right-hand side of the
+
     dq/dt = p
     dp/dt = -k q
     """
-    
+
     dqdt = p
     dpdt = -k * q
     return dqdt, dpdt
@@ -46,7 +45,7 @@ def rk4_step(q, p, dt, k=1.0):
 
 def sho_numerical(A=1.0, k=1.0, T=10.0, dt=0.01):
     """ Numerical solution of the harmonic oscillator. """
-    
+
     t = np.arange(0.0, T + dt, dt)
     q = np.zeros_like(t)
     p = np.zeros_like(t)

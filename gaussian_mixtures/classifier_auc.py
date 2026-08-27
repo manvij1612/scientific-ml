@@ -162,8 +162,8 @@ plt.xlabel(r'$\chi_1$')
 plt.ylabel(r'$\chi_2$')
 plt.axis('equal')
 plt.grid(True, alpha=0.3)
-plt.show()
 plt.savefig("verify.png")
+plt.show()
 
 #plot with testing points
 
@@ -182,8 +182,8 @@ plt.xlabel(r'$\chi_1$')
 plt.ylabel(r'$\chi_2$')
 plt.axis('equal')
 plt.grid(True, alpha=0.3)
-plt.show()
 plt.savefig("teting.png")
+plt.show()
 
 geom_test_pred_zero = geom_test_pred - 1
 conf_mat = confusion_matrix(test_components, geom_test_pred_zero)
@@ -222,5 +222,5 @@ plt.grid(True, alpha=0.4)
 plt.tight_layout()
 plt.savefig("roc_curve.png", dpi=150, bbox_inches='tight')
 print(f"AUC:{auc2}")
-plt.show()
 plt.savefig("roc_curve.png")
+plt.show()
